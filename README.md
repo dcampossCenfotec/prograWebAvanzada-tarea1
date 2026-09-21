@@ -127,5 +127,5 @@ Las siguientes preguntas corresponden al apartado «Aspectos que el estudiante d
 [PENDIENTE: completar con una fila por commit real del repositorio, en orden cronológico. Actualmente no hay commits registrados.]
 
 | # | Fecha | Hash | Mensaje | Caso | Cambio |
-| 1 | 20/9/2026 | --- | Estructura inicial de casos más readme | 1 y 2 | Readme, archivos html y css, carpetas |
+| 1 | 20/9/2026 | 0ccd30ec877fc187d5b1c7522272f33d91926d32 | Estructura inicial de casos más readme | 1 y 2 | Readme, archivos html y css, carpetas |
 
