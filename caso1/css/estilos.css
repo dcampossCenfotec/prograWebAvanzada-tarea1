@@ -5,6 +5,9 @@
   --color-texto: #24332b;
   --color-texto-secundario: #526158;
   --color-borde: #ccd5ce;
+  --color-critico: #8f3028;
+  --fondo-critico: #fff1ed;
+  --color-advertencia: #805c20;
 
   --espacio-pequeno: 0.5rem;
   --espacio-medio: 1rem;
@@ -186,6 +189,273 @@ img {
   font-weight: 700;
 }
 
+/* Alertas */
+.alertas {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-medio);
+
+  min-width: 0;
+  padding: var(--espacio-grande) var(--espacio-medio);
+}
+
+.alertas h2 {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.alerta {
+  min-width: 0;
+  padding: var(--espacio-medio);
+
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+
+  overflow-wrap: break-word;
+}
+
+.alerta h3 {
+  margin: 0 0 var(--espacio-medio);
+}
+
+.alerta p {
+  margin: 0 0 var(--espacio-pequeno);
+}
+
+.alerta p:last-child {
+  margin-bottom: 0;
+}
+
+.nivel-alerta {
+  font-weight: 600;
+}
+
+.hora-alerta {
+  color: var(--color-texto-secundario);
+  font-size: 0.875rem;
+}
+
+.alerta-critica {
+  background-color: var(--fondo-critico);
+  border-left: 0.375rem solid var(--color-critico);
+}
+
+.alerta-critica h3,
+.alerta-critica .nivel-alerta {
+  color: var(--color-critico);
+}
+
+.alerta-alta {
+  border-left: 0.25rem solid var(--color-advertencia);
+}
+
+.alerta-media {
+  border-left: 0.125rem solid var(--color-advertencia);
+}
+
+.alerta-informativa {
+  border-left: 0.125rem solid var(--color-borde);
+}
+
+/* Distribución principal */
+.panel-control {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    max-width: var(--ancho-maximo);
+    margin-inline: auto;
+}
+
+.panel-control > section {
+    min-width: 0;
+}
+
+/* Misiones */
+.misiones {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+    gap: var(--espacio-medio);
+    padding: var(--espacio-grande) var(--espacio-medio);
+}
+
+.misiones h2 {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+.mision {
+    min-width: 0;
+    padding: var(--espacio-medio);
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    overflow-wrap: break-word;
+}
+
+.mision h3 {
+    margin: 0 0 var(--espacio-medio);
+}
+
+.datos-mision {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--espacio-pequeno);
+    margin: 0;
+}
+
+.datos-mision dt {
+    color: var(--color-texto-secundario);
+    font-size: 0.875rem;
+}
+
+.datos-mision dd {
+    min-width: 0;
+    margin: 0 0 var(--espacio-pequeno);
+}
+
+.prioridad-alta {
+    color: var(--color-advertencia);
+    font-weight: 700;
+}
+
+.estado-mision {
+    justify-self: start;
+    padding: 0.25rem var(--espacio-pequeno);
+    border: 1px solid;
+    border-radius: var(--radio-borde);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.estado-progreso {
+    color: var(--color-principal);
+    background-color: var(--color-fondo);
+}
+
+.estado-suspendida {
+    color: var(--color-critico);
+    background-color: var(--fondo-critico);
+    border-width: 2px;
+}
+
+.estado-completada {
+    color: var(--color-principal);
+}
+
+.estado-pendiente {
+    color: var(--color-texto-secundario);
+    border-style: dashed;
+}
+
+/* Equipos */
+.equipos {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+    gap: var(--espacio-medio);
+    padding: var(--espacio-grande) var(--espacio-medio);
+}
+
+.equipos h2 {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+.equipo {
+    min-width: 0;
+    padding: var(--espacio-medio);
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    overflow-wrap: break-word;
+}
+
+.equipo h3 {
+    margin: 0 0 var(--espacio-medio);
+    padding-bottom: var(--espacio-pequeno);
+    border-bottom: 1px solid var(--color-borde);
+    color: var(--color-principal);
+}
+
+.datos-equipo {
+    margin: 0;
+}
+
+.datos-equipo dt {
+    margin-top: var(--espacio-medio);
+    color: var(--color-texto-secundario);
+    font-size: 0.875rem;
+}
+
+.datos-equipo dt:first-child {
+    margin-top: 0;
+}
+
+.datos-equipo dd {
+    margin: var(--espacio-pequeno) 0 0;
+}
+
+/* Agenda */
+.agenda {
+    min-width: 0;
+    padding: var(--espacio-grande) var(--espacio-medio);
+}
+
+.agenda h2 {
+    margin: 0 0 var(--espacio-medio);
+}
+
+.lista-agenda {
+    margin: 0;
+    padding-left: var(--espacio-grande);
+}
+
+.lista-agenda li {
+    padding: var(--espacio-medio);
+    border-bottom: 1px solid var(--color-borde);
+    overflow-wrap: break-word;
+}
+
+.lista-agenda li::marker {
+    color: var(--color-principal);
+    font-weight: 600;
+}
+
+.lista-agenda li:last-child {
+    border-bottom: 0;
+}
+
+.lista-agenda p {
+    margin: 0;
+}
+
+.lista-agenda .equipo-actividad {
+    margin-top: var(--espacio-pequeno);
+    color: var(--color-texto-secundario);
+    font-size: 0.875rem;
+}
+
+.lista-agenda time {
+    color: var(--color-principal);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Pie de página */
+.pie-pagina {
+    max-width: var(--ancho-maximo);
+    margin-inline: auto;
+    padding: var(--espacio-grande) var(--espacio-medio);
+    border-top: 1px solid var(--color-borde);
+    color: var(--color-texto-secundario);
+    font-size: 0.875rem;
+}
+
+.pie-pagina p {
+    margin: 0;
+}
+
 @media (min-width: 48rem) {
   .encabezado {
     grid-template-columns: minmax(0, 1fr) auto;
@@ -224,6 +494,29 @@ img {
   .resumen {
     padding-inline: var(--espacio-grande);
   }
+  .alertas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-inline: var(--espacio-grande);
+  }
+  .misiones {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-inline: var(--espacio-grande);
+}
+
+.datos-mision {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    align-items: start;
+    column-gap: var(--espacio-medio);
+}
+equipos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.equipos,
+.agenda,
+.pie-pagina {
+    padding-inline: var(--espacio-grande);
+}
 }
 
 @media (min-width: 64rem) {
@@ -240,4 +533,41 @@ img {
     grid-row: 2;
     margin-bottom: 0;
   }
+  .panel-control {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    align-items: start;
+}
+
+.panel-control > section {
+    grid-column: 1 / -1;
+}
+
+.panel-control > .misiones {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.panel-control > .alertas {
+    grid-column: 2;
+    grid-row: 2;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+}
+
+.misiones {
+    grid-template-columns: minmax(0, 1fr);
+}
+.panel-control > .resumen {
+    grid-row: 1;
+}
+
+.panel-control > .equipos {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.panel-control > .agenda {
+    grid-column: 2;
+    grid-row: 3;
+}
 }
