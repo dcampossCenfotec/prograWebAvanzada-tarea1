@@ -129,4 +129,5 @@ Las siguientes preguntas corresponden al apartado «Aspectos que el estudiante d
 | 1 | 2026-09-20 | 0ccd30e | Estructura inicial de casos más readme | Ambos | Agrega el README, la estructura HTML inicial del caso 1 y los archivos vacíos de CSS y del caso 2. |
 | 2 | 2026-09-20 | 2db29ba | Commit 0ccd30ec877fc187d5b1c7522272f33d91926d32 agregado | Ambos | Añade al README el registro del primer commit. |
 | 3 | 2026-09-20 | 56b3a13 | Estilo para header, van y resumen de operaciones | 1 | Agregar clases en html y css. Agregar mediaquerys en css.|
+| 4 | 2026-09-20 | 9a1066a | Finalizacion de estilos para equipos, agenda, y footer | 1 | Agregar clases en html y css para equipos, agenda y footer|
 
