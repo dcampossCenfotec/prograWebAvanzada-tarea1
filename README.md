@@ -119,5 +119,5 @@ Para estandarizar estilos y dar escalabilidad.
 | 3 | 2026-09-20 | 56b3a13 | Estilo para header, van y resumen de operaciones | 1 | Agregar clases en html y css. Agregar mediaquerys en css.|
 | 4 | 2026-09-20 | 9a1066a | Finalizacion de estilos para equipos, agenda, y footer | 1 | Agregar clases en html y css para equipos, agenda y footer|
 | 5 | 2026-09-20 | 27db2bf | Modificacion de readme, agrega html para todo el contendio y estilos para header y nav | 2 | html y css para caso 2 |
-| 6 | 2026-09-20 | 27db2bf | Agrega clases para secciones de Ahora y Cambios. Ademas de su css respectivo | 2 | html y css para caso 2 |
+| 6 | 2026-09-20 | 900e956 | Agrega clases para secciones de Ahora y Cambios. Ademas de su css respectivo | 2 | html y css para caso 2 |
 
