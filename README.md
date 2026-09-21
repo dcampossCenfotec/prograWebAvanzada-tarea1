@@ -64,63 +64,51 @@ Las siguientes preguntas corresponden al apartado «Aspectos que el estudiante d
 
 ### 1. ¿Por qué seleccionó determinadas etiquetas semánticas?
 
-- **Caso 1:** Para brindar una mejor legibilidad al programa de accesibilidad que se utilice.
-- **Caso 2:** [PENDIENTE: indicar las etiquetas utilizadas y justificar su elección según el significado de la programación, los avisos y los servicios].
+Para brindar una mejor legibilidad al programa de accesibilidad que se utilice.
 
 ### 2. ¿Cómo organizó la jerarquía de encabezados?
 
-- **Caso 1:** Dentro del header, coloque un h1 seguidos del p.
-- **Caso 2:** [PENDIENTE: explicar el uso de h1, h2 y h3 y la relación entre el festival, sus secciones y las actividades].
+Dentro del header, coloque un h1 seguidos del p.
 
 ### 3. ¿Cómo incorporó la accesibilidad básica?
 
-- **Caso 1:** Inclui aria-label, aria-labelby
-- **Caso 2:** [PENDIENTE: documentar idioma, navegación, legibilidad, contraste, avisos y estados comprensibles sin depender del color y textos alternativos si hay imágenes].
+Inclui aria-label, aria-labelby, ademas de pseudo-clases como :focus-visible
 
 ### 4. ¿Cómo funciona el modelo de caja en sus principales componentes?
 
-- **Caso 1:** [PENDIENTE: explicar box-sizing, margin, padding, border y límites de tamaño con ejemplos reales de los paneles y tarjetas].
-- **Caso 2:** [PENDIENTE: explicar cómo se calculan los tamaños y espaciados de las actividades, escenarios y servicios y cómo se evitan desbordamientos].
+Inicialmente es un solo grid de 1 columna porque primero es mobile first. Posteriormente se definen mas columnas segun el ancho de la pantalla
 
 ### 5. ¿Dónde utilizó posicionamiento, cuál valor de position empleó y por qué?
 
-- **Caso 1:** Use sticky para el nav, asi la barra de navegacion siempre esta presente
-- **Caso 2:** [PENDIENTE: identificar el elemento y su selector, el valor de position y cómo se evita que oculte contenido en teléfono].
+Use sticky para el nav, asi la barra de navegacion siempre esta presente
 
 ### 6. ¿Por qué algunos estilos prevalecen sobre otros?
 
-- **Caso 1:** [PENDIENTE: explicar un ejemplo real de cascada, especificidad, herencia u orden de las reglas y media queries].
-- **Caso 2:** [PENDIENTE: explicar cómo se reutilizan las clases y cómo las reglas para pantallas mayores modifican los estilos base].
+Si colocamos media querys al inicio del archivo, estos van a ser sobreescritos por los otros que se coloquen debajo. Especialmente por la caracterisica de cascada que tiene CSS
 
 ### 7. ¿Dónde utilizó Flexbox y por qué?
 
-- **Caso 1:** En el nav para que los enlaces se acomoden em varias filas cuando falte espacio.
-- **Caso 2:** [PENDIENTE: explicar el uso de Flexbox en la navegación y otros componentes, incluyendo alineación y ajuste de elementos cuando corresponda].
+En el nav para que los enlaces se acomoden em varias filas cuando falte espacio.
 
 ### 8. ¿Dónde utilizó CSS Grid y por qué?
 
-- **Caso 1:** En el encabezado (y en su media query) porque es mas facil organizarlo de esa forma. 
-- **Caso 2:** [PENDIENTE: explicar la cuadrícula de programación por escenarios y otras zonas que utilicen Grid].
+En el encabezado (y en su media query) porque es mas facil organizarlo de esa forma y en el main
 
 ### 9. ¿Cómo cambia el layout entre teléfono, tableta y escritorio?
 
-- **Caso 1:** Para el encabezado, incialmente es una columna y despues de 48rem son 2
-- **Caso 2:** [PENDIENTE: describir la prioridad de las actividades actuales en teléfono y la comparación simultánea de escenarios en escritorio].
+Para el encabezado, incialmente es una columna y despues de 48rem son 2
 
 ### 10. ¿Cuáles media queries utilizó y por qué seleccionó esos breakpoints?
 
-- **Caso 1:** Para header use min-width y los seleccione porque hay mejor armonizacion visual segun lo investigado en internet
-- **Caso 2:** [PENDIENTE: enumerar las consultas min-width implementadas y explicar cómo amplían y reorganizan el diseño base para teléfono].
+Para header use min-width y los seleccione porque hay mejor armonizacion visual segun lo investigado en internet
 
 ### 11. ¿Cuáles unidades relativas utilizó?
 
-- **Caso 1:** min-width: 48rem, minmax(0, 1fr).
-- **Caso 2:** [PENDIENTE: indicar las unidades relativas utilizadas en tipografía, espaciados, contenedores y columnas].
+min-width: 48rem, minmax(0, 1fr), max-width: 100%.
 
 ### 12. ¿Para qué sirven las variables CSS que definió?
 
-- **Caso 1:** Para estandarizar estilos y dar escalabilidad.
-- **Caso 2:** [PENDIENTE: identificar las variables de :root y explicar cómo mantienen la coherencia visual del festival].
+Para estandarizar estilos y dar escalabilidad.
 
 ## Resumen de commits
 
@@ -130,4 +118,5 @@ Las siguientes preguntas corresponden al apartado «Aspectos que el estudiante d
 | 2 | 2026-09-20 | 2db29ba | Commit 0ccd30ec877fc187d5b1c7522272f33d91926d32 agregado | Ambos | Añade al README el registro del primer commit. |
 | 3 | 2026-09-20 | 56b3a13 | Estilo para header, van y resumen de operaciones | 1 | Agregar clases en html y css. Agregar mediaquerys en css.|
 | 4 | 2026-09-20 | 9a1066a | Finalizacion de estilos para equipos, agenda, y footer | 1 | Agregar clases en html y css para equipos, agenda y footer|
+| 5 | 2026-09-20 |  | Modificacion de readme, agrega html para todo el contendio y estilos para header y nav | 1 | html y css para caso 2 |
 

@@ -60,12 +60,6 @@ a:focus-visible {
   outline-offset: 0.2rem;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 /* Encabezado */
 .encabezado {
   display: grid;
