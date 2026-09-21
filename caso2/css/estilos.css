@@ -253,6 +253,143 @@ a:focus-visible {
   font-size: 0.9375rem;
 }
 
+/* Servicios */
+.servicios {
+    min-width: 0;
+    margin-bottom: 2rem;
+}
+
+.servicios h2 {
+    margin: 0 0 var(--espacio-medio);
+}
+
+.lista-servicios {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    margin: 0;
+    padding: var(--espacio-medio);
+
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+}
+
+.lista-servicios dt {
+    padding-top: var(--espacio-medio);
+    color: var(--color-principal);
+    font-weight: 700;
+}
+
+.lista-servicios dt:first-child {
+    padding-top: 0;
+}
+
+.lista-servicios dd {
+    min-width: 0;
+    margin: 0;
+    padding: var(--espacio-pequeno) 0 var(--espacio-medio);
+    border-bottom: 1px solid var(--color-borde);
+    overflow-wrap: break-word;
+}
+
+.lista-servicios dd:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+/* Programación por escenarios */
+.escenarios {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--espacio-medio);
+
+    min-width: 0;
+    margin-bottom: 2rem;
+}
+
+.escenarios h2,
+.descripcion-escenarios {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+.descripcion-escenarios {
+    color: var(--color-texto-secundario);
+}
+
+.escenario {
+    min-width: 0;
+    padding: var(--espacio-medio);
+
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    overflow-wrap: break-word;
+}
+
+.escenario h3 {
+    margin: 0;
+    padding-bottom: var(--espacio-medio);
+    border-bottom: 2px solid var(--color-principal);
+    color: var(--color-principal);
+}
+
+.horarios-escenario {
+    margin: 0;
+    padding-left: var(--espacio-grande);
+}
+
+.horarios-escenario li {
+    padding: var(--espacio-medio) 0;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.horarios-escenario li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.horarios-escenario li::marker {
+    color: var(--color-principal);
+    font-weight: 600;
+}
+
+.horarios-escenario p {
+    margin: 0;
+}
+
+.horarios-escenario p:last-child {
+    margin-top: var(--espacio-pequeno);
+    color: var(--color-texto-secundario);
+    font-size: 0.875rem;
+}
+
+.horarios-escenario time {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Pie de página */
+.pie-pagina {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-pequeno);
+
+    max-width: var(--ancho-maximo);
+    margin-inline: auto;
+    padding: var(--espacio-grande) var(--espacio-medio);
+
+    border-top: 1px solid var(--color-borde);
+    color: var(--color-texto-secundario);
+    font-size: 0.875rem;
+}
+
+.pie-pagina p {
+    min-width: 0;
+    margin: 0;
+    overflow-wrap: break-word;
+}
+
 /* Tableta y pantallas mayores */
 @media (min-width: 48rem) {
   html {
@@ -293,9 +430,49 @@ a:focus-visible {
   .lista-programacion h3 {
     grid-column: 1 / -1;
   }
+  .lista-servicios {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    column-gap: var(--espacio-grande);
+}
+
+.lista-servicios dt,
+.lista-servicios dd {
+    padding-block: var(--espacio-medio);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.lista-servicios dt:first-child,
+.lista-servicios dd:nth-child(2) {
+    padding-top: 0;
+}
+
+.lista-servicios dt:last-of-type,
+.lista-servicios dd:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.escenarios {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.pie-pagina {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: var(--espacio-grande);
+    padding-inline: var(--espacio-grande);
+}
+
+.pie-pagina p {
+    flex: 1 1 20rem;
+}
 }
 @media (min-width: 64rem) {
   .ahora {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+  .escenarios {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
 }
