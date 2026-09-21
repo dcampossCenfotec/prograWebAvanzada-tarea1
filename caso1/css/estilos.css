@@ -1,0 +1,243 @@
+:root {
+  --color-principal: #23483c;
+  --color-fondo: #f3f5f1;
+  --color-superficie: #ffffff;
+  --color-texto: #24332b;
+  --color-texto-secundario: #526158;
+  --color-borde: #ccd5ce;
+
+  --espacio-pequeno: 0.5rem;
+  --espacio-medio: 1rem;
+  --espacio-grande: 1.5rem;
+
+  --radio-borde: 0.5rem;
+  --ancho-maximo: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+a {
+  color: var(--color-principal);
+  text-underline-offset: 0.2em;
+}
+
+a:focus-visible {
+  outline: 0.2rem solid var(--color-principal);
+  outline-offset: 0.2rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Encabezado */
+.encabezado {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-pequeno);
+
+  max-width: var(--ancho-maximo);
+  margin-inline: auto;
+  padding: var(--espacio-grande) var(--espacio-medio);
+
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.encabezado h1,
+.encabezado p {
+  margin: 0;
+}
+
+.titulo-expedicion {
+  font-size: 1.75rem;
+  overflow-wrap: break-word;
+}
+
+.ubicacion,
+.fecha {
+  color: var(--color-texto-secundario);
+}
+
+.fecha {
+  margin-top: 0;
+  font-size: 0.9375rem;
+}
+
+.dia {
+  font-weight: 600;
+}
+
+/* Navegación */
+.navegacion {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-superficie);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.lista-navegacion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espacio-pequeno);
+
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  padding: var(--espacio-pequeno) var(--espacio-medio);
+
+  list-style: none;
+}
+
+.lista-navegacion a {
+  display: block;
+  padding: 0.75rem var(--espacio-medio);
+
+  border-radius: var(--radio-borde);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.lista-navegacion a:hover,
+.lista-navegacion a:focus-visible {
+  background-color: var(--color-principal);
+  color: var(--color-superficie);
+}
+
+/* Resumen */
+.resumen {
+  min-width: 0;
+  padding: var(--espacio-grande) var(--espacio-medio);
+}
+
+.resumen h2 {
+  margin: 0;
+}
+
+.hora-resumen {
+  margin: var(--espacio-pequeno) 0 var(--espacio-grande);
+  color: var(--color-texto-secundario);
+  font-size: 0.9375rem;
+}
+
+.indicadores {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  margin: 0;
+}
+
+.indicadores dt,
+.indicadores dd {
+  padding: var(--espacio-medio);
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  overflow-wrap: break-word;
+}
+
+.indicadores dt {
+  padding-bottom: var(--espacio-pequeno);
+  border-bottom: 0;
+  border-radius: var(--radio-borde) var(--radio-borde) 0 0;
+  font-weight: 600;
+}
+
+.indicadores dd {
+  margin: 0 0 var(--espacio-medio);
+  padding-top: 0;
+  border-top: 0;
+  border-radius: 0 0 var(--radio-borde) var(--radio-borde);
+}
+
+.indicadores .indicador-alertas {
+  border-left: 0.25rem solid var(--color-principal);
+  font-weight: 700;
+}
+
+@media (min-width: 48rem) {
+  .encabezado {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "titulo fecha"
+      "ubicacion dia";
+
+    align-items: center;
+    column-gap: var(--espacio-grande);
+    padding: 2rem var(--espacio-grande);
+  }
+
+  .titulo-expedicion {
+    grid-area: titulo;
+    font-size: 2rem;
+  }
+
+  .ubicacion {
+    grid-area: ubicacion;
+  }
+
+  .fecha {
+    grid-area: fecha;
+    text-align: right;
+  }
+
+  .dia {
+    grid-area: dia;
+    text-align: right;
+  }
+
+  .lista-navegacion {
+    padding-inline: var(--espacio-grande);
+  }
+
+  .resumen {
+    padding-inline: var(--espacio-grande);
+  }
+}
+
+@media (min-width: 64rem) {
+  .indicadores {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: var(--espacio-medio);
+  }
+
+  .indicadores dt {
+    grid-row: 1;
+  }
+
+  .indicadores dd {
+    grid-row: 2;
+    margin-bottom: 0;
+  }
+}

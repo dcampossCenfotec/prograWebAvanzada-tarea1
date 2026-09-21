@@ -64,17 +64,17 @@ Las siguientes preguntas corresponden al apartado «Aspectos que el estudiante d
 
 ### 1. ¿Por qué seleccionó determinadas etiquetas semánticas?
 
-- **Caso 1:** [PENDIENTE: indicar las etiquetas utilizadas y justificar su elección según el significado de las zonas del centro de control].
+- **Caso 1:** Para brindar una mejor legibilidad al programa de accesibilidad que se utilice.
 - **Caso 2:** [PENDIENTE: indicar las etiquetas utilizadas y justificar su elección según el significado de la programación, los avisos y los servicios].
 
 ### 2. ¿Cómo organizó la jerarquía de encabezados?
 
-- **Caso 1:** [PENDIENTE: explicar el uso de h1, h2 y h3 y la relación entre el título principal, las secciones y sus componentes].
+- **Caso 1:** Dentro del header, coloque un h1 seguidos del p.
 - **Caso 2:** [PENDIENTE: explicar el uso de h1, h2 y h3 y la relación entre el festival, sus secciones y las actividades].
 
 ### 3. ¿Cómo incorporó la accesibilidad básica?
 
-- **Caso 1:** [PENDIENTE: documentar idioma, navegación, legibilidad, contraste, estados comprensibles sin depender del color y textos alternativos si hay imágenes].
+- **Caso 1:** Inclui aria-label, aria-labelby
 - **Caso 2:** [PENDIENTE: documentar idioma, navegación, legibilidad, contraste, avisos y estados comprensibles sin depender del color y textos alternativos si hay imágenes].
 
 ### 4. ¿Cómo funciona el modelo de caja en sus principales componentes?
@@ -84,7 +84,7 @@ Las siguientes preguntas corresponden al apartado «Aspectos que el estudiante d
 
 ### 5. ¿Dónde utilizó posicionamiento, cuál valor de position empleó y por qué?
 
-- **Caso 1:** [PENDIENTE: identificar el elemento y su selector, el valor de position, su propósito y el uso de z-index cuando corresponda].
+- **Caso 1:** Use sticky para el nav, asi la barra de navegacion siempre esta presente
 - **Caso 2:** [PENDIENTE: identificar el elemento y su selector, el valor de position y cómo se evita que oculte contenido en teléfono].
 
 ### 6. ¿Por qué algunos estilos prevalecen sobre otros?
@@ -94,38 +94,37 @@ Las siguientes preguntas corresponden al apartado «Aspectos que el estudiante d
 
 ### 7. ¿Dónde utilizó Flexbox y por qué?
 
-- **Caso 1:** [PENDIENTE: identificar componentes y propiedades de Flexbox y justificar la distribución unidimensional].
+- **Caso 1:** En el nav para que los enlaces se acomoden em varias filas cuando falte espacio.
 - **Caso 2:** [PENDIENTE: explicar el uso de Flexbox en la navegación y otros componentes, incluyendo alineación y ajuste de elementos cuando corresponda].
 
 ### 8. ¿Dónde utilizó CSS Grid y por qué?
 
-- **Caso 1:** [PENDIENTE: explicar la cuadrícula principal, sus columnas o áreas y la distribución de las zonas del centro de control].
+- **Caso 1:** En el encabezado (y en su media query) porque es mas facil organizarlo de esa forma. 
 - **Caso 2:** [PENDIENTE: explicar la cuadrícula de programación por escenarios y otras zonas que utilicen Grid].
 
 ### 9. ¿Cómo cambia el layout entre teléfono, tableta y escritorio?
 
-- **Caso 1:** [PENDIENTE: describir el orden, las columnas y la prioridad de las alertas en los tres tamaños].
+- **Caso 1:** Para el encabezado, incialmente es una columna y despues de 48rem son 2
 - **Caso 2:** [PENDIENTE: describir la prioridad de las actividades actuales en teléfono y la comparación simultánea de escenarios en escritorio].
 
 ### 10. ¿Cuáles media queries utilizó y por qué seleccionó esos breakpoints?
 
-- **Caso 1:** [PENDIENTE: enumerar las consultas min-width implementadas y justificar cada punto de cambio según las necesidades del contenido].
+- **Caso 1:** Para header use min-width y los seleccione porque hay mejor armonizacion visual segun lo investigado en internet
 - **Caso 2:** [PENDIENTE: enumerar las consultas min-width implementadas y explicar cómo amplían y reorganizan el diseño base para teléfono].
 
 ### 11. ¿Cuáles unidades relativas utilizó?
 
-- **Caso 1:** [PENDIENTE: indicar unidades como rem, em, %, fr o vw con ejemplos reales y justificar su uso].
+- **Caso 1:** min-width: 48rem, minmax(0, 1fr).
 - **Caso 2:** [PENDIENTE: indicar las unidades relativas utilizadas en tipografía, espaciados, contenedores y columnas].
 
 ### 12. ¿Para qué sirven las variables CSS que definió?
 
-- **Caso 1:** [PENDIENTE: identificar las variables de :root para colores, fondo, texto, espaciados y bordes o radios, y explicar dónde se reutilizan].
+- **Caso 1:** Para estandarizar estilos y dar escalabilidad.
 - **Caso 2:** [PENDIENTE: identificar las variables de :root y explicar cómo mantienen la coherencia visual del festival].
 
 ## Resumen de commits
 
-[PENDIENTE: completar con una fila por commit real del repositorio, en orden cronológico. Actualmente no hay commits registrados.]
-
 | # | Fecha | Hash | Mensaje | Caso | Cambio |
-| 1 | 20/9/2026 | 0ccd30ec877fc187d5b1c7522272f33d91926d32 | Estructura inicial de casos más readme | 1 y 2 | Readme, archivos html y css, carpetas |
-
+| --- | --- | --- | --- | --- | --- |
+| 1 | 2026-09-20 | 0ccd30e | Estructura inicial de casos más readme | Ambos | Agrega el README, la estructura HTML inicial del caso 1 y los archivos vacíos de CSS y del caso 2. |
+| 2 | 2026-09-20 | 2db29ba | Commit 0ccd30ec877fc187d5b1c7522272f33d91926d32 agregado | Ambos | Añade al README el registro del primer commit. |

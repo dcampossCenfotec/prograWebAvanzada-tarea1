@@ -1,11 +1,287 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caso 1</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <title>Expedición Bosque Nuboso 2026</title>
+  </head>
+  <body>
+    <header class="encabezado">
+      <h1 class="titulo-expedicion">Expedición Bosque Nuboso 2026</h1>
+      <p class="ubicacion">
+        Ubicación: Estación Biológica Monteverde, Costa Rica.
+      </p>
+      <p class="fecha">
+        Fecha: <time datetime="2026-09-20">20 de septiembre de 2026</time>.
+      </p>
+      <p class="dia">Día 4 de 7.</p>
+    </header>
+
+    <nav class="navegacion" aria-label="Navegación principal">
+      <ul class="lista-navegacion">
+        <li><a href="#resumen">Resumen</a></li>
+        <li><a href="#misiones">Misiones</a></li>
+        <li><a href="#equipos">Equipos</a></li>
+        <li><a href="#alertas">Alertas</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="resumen" id="resumen" aria-labelledby="titulo-resumen">
+        <h2 id="titulo-resumen">Resumen de operaciones</h2>
+        <p class="hora-resumen">
+          Información de la jornada al corte de las
+          <time datetime="10:45">10:45</time>.
+        </p>
+
+        <dl class="indicadores">
+          <dt>Investigadores activos</dt>
+          <dd>24 investigadores distribuidos en cuatro equipos.</dd>
+
+          <dt>Misiones en progreso</dt>
+          <dd>2 misiones.</dd>
+
+          <dt>Misiones completadas</dt>
+          <dd>1 misión.</dd>
+
+          <dt class="indicador-alertas">Alertas pendientes</dt>
+          <dd class="indicador-alertas">4 alertas, una de ellas crítica.</dd>
+        </dl>
+      </section>
+
+      <section id="alertas" aria-labelledby="titulo-alertas">
+        <h2 id="titulo-alertas">Alertas</h2>
+
+        <article>
+          <h3>Lluvia intensa en el sector norte</h3>
+          <p><strong>Nivel: crítico.</strong></p>
+          <p>Reportada a las 10:35.</p>
+          <p>
+            La inspección de laderas está suspendida. El equipo de Geología
+            permanece en el refugio norte hasta que se evalúen las condiciones
+            del sendero.
+          </p>
+        </article>
+
+        <article>
+          <h3>Sensor meteorológico sin conexión</h3>
+          <p><strong>Nivel: alto.</strong></p>
+          <p>Reportada a las 10:20.</p>
+          <p>
+            El sensor del mirador no transmite datos. El equipo de Meteorología
+            debe revisar la conexión y continuar el registro manual desde la
+            estación central.
+          </p>
+        </article>
+
+        <article>
+          <h3>Batería baja en un registrador de agua</h3>
+          <p>Nivel: medio.</p>
+          <p>Reportada a las 10:10.</p>
+          <p>
+            El registrador de la quebrada tiene un 18 % de batería. El equipo de
+            Hidrología debe sustituirla al finalizar el muestreo.
+          </p>
+        </article>
+
+        <article>
+          <h3>Retraso en el traslado de muestras</h3>
+          <p>Nivel: informativo.</p>
+          <p>Reportada a las 09:55.</p>
+          <p>
+            La entrega de muestras del equipo de Biología se traslada de las
+            11:00 a las 11:30. La agenda incluye el nuevo horario.
+          </p>
+        </article>
+      </section>
+
+      <section id="misiones" aria-labelledby="titulo-misiones">
+        <h2 id="titulo-misiones">Misiones de la jornada</h2>
+
+        <article>
+          <h3>Monitoreo de anfibios</h3>
+          <dl>
+            <dt>Equipo responsable</dt>
+            <dd>Biología</dd>
+            <dt>Ubicación</dt>
+            <dd>Sendero norte</dd>
+            <dt>Horario</dt>
+            <dd>08:30 a 11:30</dd>
+            <dt>Prioridad</dt>
+            <dd>Alta</dd>
+            <dt>Estado</dt>
+            <dd>En progreso</dd>
+          </dl>
+        </article>
+
+        <article>
+          <h3>Muestreo de calidad del agua</h3>
+          <dl>
+            <dt>Equipo responsable</dt>
+            <dd>Hidrología</dd>
+            <dt>Ubicación</dt>
+            <dd>Quebrada Cavatana</dd>
+            <dt>Horario</dt>
+            <dd>09:00 a 12:00</dd>
+            <dt>Prioridad</dt>
+            <dd>Alta</dd>
+            <dt>Estado</dt>
+            <dd>En progreso</dd>
+          </dl>
+        </article>
+
+        <article>
+          <h3>Inspección de laderas</h3>
+          <dl>
+            <dt>Equipo responsable</dt>
+            <dd>Geología</dd>
+            <dt>Ubicación</dt>
+            <dd>Sector norte</dd>
+            <dt>Horario previsto</dt>
+            <dd>09:30 a 11:00</dd>
+            <dt>Prioridad</dt>
+            <dd>Alta</dd>
+            <dt>Estado</dt>
+            <dd>Suspendida por lluvia intensa</dd>
+          </dl>
+        </article>
+
+        <article>
+          <h3>Censo de aves</h3>
+          <dl>
+            <dt>Equipo responsable</dt>
+            <dd>Biología</dd>
+            <dt>Ubicación</dt>
+            <dd>Mirador del roble</dd>
+            <dt>Horario</dt>
+            <dd>06:00 a 08:00</dd>
+            <dt>Prioridad</dt>
+            <dd>Baja</dd>
+            <dt>Estado</dt>
+            <dd>Completada</dd>
+          </dl>
+        </article>
+
+        <article>
+          <h3>Medición de humedad y temperatura</h3>
+          <dl>
+            <dt>Equipo responsable</dt>
+            <dd>Meteorología</dd>
+            <dt>Ubicación</dt>
+            <dd>Estación central</dd>
+            <dt>Horario</dt>
+            <dd>11:00 a 12:30</dd>
+            <dt>Prioridad</dt>
+            <dd>Media</dd>
+            <dt>Estado</dt>
+            <dd>Pendiente</dd>
+          </dl>
+        </article>
+      </section>
+
+      <section id="equipos" aria-labelledby="titulo-equipos">
+        <h2 id="titulo-equipos">Equipos científicos</h2>
+
+        <article>
+          <h3>Biología</h3>
+          <dl>
+            <dt>Integrantes</dt>
+            <dd>8 investigadores</dd>
+            <dt>Misión actual</dt>
+            <dd>Monitoreo de anfibios</dd>
+            <dt>Estado</dt>
+            <dd>En campo</dd>
+            <dt>Próxima actividad</dt>
+            <dd>Entrega de muestras a las 11:30.</dd>
+          </dl>
+        </article>
+
+        <article>
+          <h3>Hidrología</h3>
+          <dl>
+            <dt>Integrantes</dt>
+            <dd>6 investigadores</dd>
+            <dt>Misión actual</dt>
+            <dd>Muestreo de calidad del agua</dd>
+            <dt>Estado</dt>
+            <dd>En campo</dd>
+            <dt>Próxima actividad</dt>
+            <dd>Sustitución de batería del registrador a las 12:00.</dd>
+          </dl>
+        </article>
+
+        <article>
+          <h3>Meteorología</h3>
+          <dl>
+            <dt>Integrantes</dt>
+            <dd>5 investigadores</dd>
+            <dt>Actividad actual</dt>
+            <dd>
+              Preparación de instrumentos para medir humedad y temperatura
+            </dd>
+            <dt>Estado</dt>
+            <dd>En estación</dd>
+            <dt>Próxima actividad</dt>
+            <dd>Medición de humedad y temperatura a las 11:00.</dd>
+          </dl>
+        </article>
+
+        <article>
+          <h3>Geología</h3>
+          <dl>
+            <dt>Integrantes</dt>
+            <dd>5 investigadores</dd>
+            <dt>Misión actual</dt>
+            <dd>Inspección de laderas, suspendida por lluvia</dd>
+            <dt>Estado</dt>
+            <dd>En resguardo en el refugio norte</dd>
+            <dt>Próxima actividad</dt>
+            <dd>Evaluación de las condiciones del sendero a las 13:00.</dd>
+          </dl>
+        </article>
+      </section>
+
+      <section id="agenda" aria-labelledby="titulo-agenda">
+        <h2 id="titulo-agenda">Próximas actividades</h2>
+        <ol>
+          <li>
+            <p>11:00: medición de humedad y temperatura.</p>
+            <p>Equipo responsable: Meteorología.</p>
+          </li>
+          <li>
+            <p>11:30: entrega de muestras.</p>
+            <p>Equipo responsable: Biología.</p>
+          </li>
+          <li>
+            <p>12:00: sustitución de batería del registrador de agua.</p>
+            <p>Equipo responsable: Hidrología.</p>
+          </li>
+          <li>
+            <p>12:30: revisión del sensor sin conexión.</p>
+            <p>Equipo responsable: Meteorología.</p>
+          </li>
+          <li>
+            <p>13:00: evaluación de las condiciones del sendero norte.</p>
+            <p>Equipo responsable: Geología.</p>
+          </li>
+          <li>
+            <p>16:00: reunión de resultados de la jornada.</p>
+            <p>
+              Equipos responsables: Biología, Hidrología, Meteorología y
+              Geología.
+            </p>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Expedición Bosque Nuboso 2026. Estación Biológica Monteverde, Costa
+        Rica.
+      </p>
+    </footer>
+  </body>
 </html>
